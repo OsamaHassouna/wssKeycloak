@@ -19,11 +19,19 @@ body {
 
     body {
     padding:30px !important;
-    background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
-    background-size: 300% 300%;
-    -webkit-animation: Background 25s ease infinite;
+    /* background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1); */
+    background-image: url('../img/bg-2.png');
+    /* height: 25px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 123px; */
+    /* margin: 3px 10px 5px; */
+    /* text-indent: -99999px; */
+
+    /* background-size: 300% 300%; */
+    /* -webkit-animation: Background 25s ease infinite;
     -moz-animation: Background 25s ease infinite;
-    animation: Background 25s ease infinite;
+    animation: Background 25s ease infinite; */
   }
   
   @-webkit-keyframes Background {

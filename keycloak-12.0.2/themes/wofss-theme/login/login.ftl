@@ -15,7 +15,7 @@ ${msg("loginTitle",(realm.displayName!''))}
 </div>
 <h2 class="title" style="text-align:center;">${msg("doLogIn")}</h2>
 <p class="desc"> ${msg("WelcomeLogIn")} </p>
-<form id="kc-form-login" class="form form1" return true;" action="${url.loginAction}" method="post">
+<form id="kc-form-login" class="form form1"  onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
    <div class="input-group">
       <label>${msg("username")}</label>
       <div>
