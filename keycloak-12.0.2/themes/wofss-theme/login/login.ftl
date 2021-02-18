@@ -11,7 +11,7 @@ ${msg("loginTitle",(realm.displayName!''))}
 <#if realm.password>
 <div class="card-body">
 <div style="text-align:center;">
-   <img  src="${url.resourcesPath}/img/logo.png" alt="logo" style="height:60px;">
+   <img  src="${url.resourcesPath}/img/logo.svg" alt="logo" style="height:80px;">
 </div>
 <h2 class="title" style="text-align:center;">${msg("doLogIn")}</h2>
 <p class="desc"> ${msg("WelcomeLogIn")} </p>
