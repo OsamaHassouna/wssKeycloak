@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="form-group text-center">
+                    <div class="form-group text-center m-0">
                         <span>Back to <a href="${url.loginUrl}" class="text-primary text-decoration-underline">${kcSanitize(msg("login"))?no_esc}</a></span>
                     </div>
                 </div>

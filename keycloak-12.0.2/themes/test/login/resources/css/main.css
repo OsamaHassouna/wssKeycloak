@@ -55,6 +55,9 @@
 .m-0{
     margin: 0px !important;
 }
+.m-10{
+    margin: 10px !important;
+}
 .mt-15{
     margin-top: 15px !important;
 }
@@ -380,11 +383,11 @@ input.form-control::placeholder{
         flex-direction: column;
     }
 }
-/* @media (max-width:550px){
-    .wss-kclogin{
-        height: calc(100vh + 100px);
+@media (max-width:767px){
+    .action-group.d-flex{
+        flex-direction: column;
     }
-} */
+}
 @media (max-height: 710px){
     .wss-kclogin{
         height: calc(100vh + 150px);
