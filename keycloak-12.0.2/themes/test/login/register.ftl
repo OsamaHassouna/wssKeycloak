@@ -4,21 +4,21 @@
         ${msg("registerTitle")}
     <#elseif section = "form">
         
-        <div class="card d-flex align-items-center">
+        <div class="card d-flex align-items-stretch w-730">
             <div class="left">
                 <div class="img-container"></div>
             </div>
             <div class="right">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="form-group mb-40">
+                        <div class="form-group mb-30">
                             <div class="logo text-center">
                                 <img  src="${url.resourcesPath}/img/logo.png" alt="logo">
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="form-group row mb-50">
+                        <div class="form-group row mb-30 d-flex">
                             <div class="col-sm-12 col-md-6 col-lg-6 text-right">
                                 <a href="${url.loginUrl}" class="btn-link btn-muted pb-hover font-weight-bold font-size-lg">${msg("login")}</a>
                             </div>
@@ -113,7 +113,7 @@
                             </div>
 
                             <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="form-group mb-30">
+                                <div class="form-group mb-20">
                                     <label for="password-confirm">${msg("passwordConfirm")}</label>
                                     <input type="password" class='form-control' placeholder="********"
                                         id="password-confirm" name="password-confirm"

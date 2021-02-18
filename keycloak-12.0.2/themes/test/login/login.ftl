@@ -6,21 +6,23 @@
 
         <#elseif section = "form">
 
-        <div class="card d-flex align-items-center">
+        <div class="card d-flex align-items-stretch w-730">
             <div class="left">
-                <div class="img-container"></div>
+                <div class="img-container">
+                    <#--  <img src="${url.resourcesPath}/img/bg-1.jpg" alt="Chamber">  -->
+                </div>
             </div>
             <div class="right">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="form-group mb-40">
+                        <div class="form-group mb-30">
                             <div class="logo text-center">
                                 <img  src="${url.resourcesPath}/img/logo.png" alt="logo">
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="form-group row mb-50">
+                        <div class="form-group row mb-30 d-flex">
                             <div class="col-sm-12 col-md-6 col-lg-6 text-right">
                                 <a href="${url.loginUrl}" class="btn-link btn-muted pb-hover active font-weight-bold font-size-lg">${msg("login")}</a>
                             </div>
@@ -66,7 +68,7 @@
                             </div>
 
                             <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="form-group mb-30">
+                                <div class="form-group mb-20">
                                     <label for="password">${msg("password")}</label>
                                     <div class="input-group">
                                         <div class="input-icon font-size-sm">
@@ -79,7 +81,7 @@
                             </div>
 
                             <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="form-group row d-flex align-items-center mb-50">
+                                <div class="form-group row d-flex align-items-center mb-30">
                                     <div class="col-sm-12 col-md-7 col-lg-7">
                                         <button class="btn btn-primary full-width" name="login" id="kc-login" type="submit" value="${msg('doLogIn')}">${msg('login')}</button>
                                     </div>
