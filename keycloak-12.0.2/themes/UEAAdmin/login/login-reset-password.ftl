@@ -8,7 +8,7 @@
         <form id="kc-reset-password-form" action="${url.loginAction}" method="post">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="form-group mb-40">
+                    <div class="form-group mb-30">
                         <div class="logo text-center">
                             <img  src="${url.resourcesPath}/img/logo.png" alt="logo">
                         </div>
@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="form-group text-center mb-40">
+                    <div class="form-group text-center mb-30">
                         <h4 class="text-primary font-size-h5 font-weight-normal">${msg("forgotPassword")}</h4>
                         <p class="text-muted font-size-sm">Enter your username or email address and we will send you instructions on how to create a new password.</p>
                     </div>
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="form-group mb-40">
+                    <div class="form-group mb-20">
                         <button class="btn btn-primary full-width" type="submit" value="${msg('doSubmit')}">${msg('doSubmit')}</button>
                     </div>
                 </div>
