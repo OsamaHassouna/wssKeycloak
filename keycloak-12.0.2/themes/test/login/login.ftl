@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="form-group row mb-30 d-flex">
+                        <div class="form-group row mb-30 d-flex justify-content-center">
                             <div class="col-sm-12 col-md-6 col-lg-6 text-right">
                                 <a href="${url.loginUrl}" class="btn-link btn-muted pb-hover active font-weight-bold font-size-lg">${msg("login")}</a>
                             </div>
@@ -81,13 +81,13 @@
                             </div>
 
                             <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="form-group row d-flex align-items-center mb-30">
+                                <div class="form-group row mb-30">
                                     <div class="col-sm-12 col-md-7 col-lg-7">
                                         <button class="btn btn-primary full-width" name="login" id="kc-login" type="submit" value="${msg('doLogIn')}">${msg('login')}</button>
                                     </div>
                                     <#if realm.rememberMe && !usernameEditDisabled??>
                                     <div class="col-sm-12 col-md-5 col-lg-5">
-                                        <label class="checkbox">
+                                        <label class="checkbox mt-15">
                                             <#if login.rememberMe??>
                                             <input type="checkbox" checked>
                                             <#else>

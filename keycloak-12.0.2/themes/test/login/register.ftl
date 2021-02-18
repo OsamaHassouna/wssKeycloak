@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="form-group row mb-30 d-flex">
+                        <div class="form-group row mb-30 d-flex justify-content-center">
                             <div class="col-sm-12 col-md-6 col-lg-6 text-right">
                                 <a href="${url.loginUrl}" class="btn-link btn-muted pb-hover font-weight-bold font-size-lg">${msg("login")}</a>
                             </div>
