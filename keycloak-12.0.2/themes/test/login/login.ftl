@@ -12,7 +12,7 @@
                     <#--  <img src="${url.resourcesPath}/img/bg-1.jpg" alt="Chamber">  -->
                 </div>
             </div>
-            <div class="right">
+            <div class="right pl-30">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="form-group mb-30">
@@ -40,6 +40,16 @@
                     <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
 
                         <div class="row">
+                            <#if messagesPerField.existsError('username','password')>
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group mb-20">
+                                        <span id="input-error" class="${properties.kcErrorMessageClass!} d-flex align-items-center" aria-live="polite">
+                                            <i class="fa fa-exclamation-circle mr-10"></i>
+                                            ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
+                                        </span>
+                                    </div>
+                                </div>
+                            </#if>
                             <div class="col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group mb-20">
                                     <label for="username" >
@@ -56,21 +66,15 @@
                                             <i class="fa fa-envelope"></i>
                                         </div>
                                         <input tabindex="1" id="username" name="username" value="${(login.username!'')}" type="text" 
-                                            class='form-control' autofocus autocomplete="off" placeholder="yourmail@example.com"
-                                            aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>">
-
-                                            <#if messagesPerField.existsError('username','password')>
-                                                <span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
-                                                        ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
-                                                </span>
-                                            </#if>
+                                                class='form-control' autofocus autocomplete="off" placeholder="yourmail@example.com"
+                                                aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>">
                                         </#if>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="form-group mb-20">
+                                <div class="form-group mb-30">
                                     <label for="password">${msg("password")}</label>
                                     <div class="input-group">
                                         <div class="input-icon font-size-sm">
@@ -83,7 +87,7 @@
                             </div>
 
                             <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="action-group d-flex mb-30">
+                                <div class="action-group d-flex mb-20">
                                         <button class="btn btn-primary full-width" name="login" id="kc-login" type="submit" value="${msg('doLogIn')}" style="flex: 2;">${msg('login')}</button>
                                     <#if realm.rememberMe && !usernameEditDisabled??>
                                         <label class="checkbox m-10">
@@ -96,10 +100,6 @@
                                             ${msg("rememberMe")}
                                         </label>
                                     </#if>
-                                    <#--  <div class="col-sm-12 col-md-7 col-lg-7">
-                                    </div>
-                                    <div class="col-sm-12 col-md-5 col-lg-5">
-                                    </div>  -->
                                 </div>
                             </div>
                             

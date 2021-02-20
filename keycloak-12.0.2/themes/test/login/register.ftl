@@ -8,7 +8,7 @@
             <div class="left">
                 <div class="img-container"></div>
             </div>
-            <div class="right">
+            <div class="right pl-30">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="form-group mb-30">

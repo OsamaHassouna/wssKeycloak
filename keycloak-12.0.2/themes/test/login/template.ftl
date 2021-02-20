@@ -66,9 +66,9 @@
                             </div>
                         </div>
                     </div>
-                    </#if>
+                </#if>
                     
-                <#if displayMessage && message?has_content && (message.type != ' warning' || !isAppInitiatedAction??)>
+                <#--  <#if displayMessage && message?has_content && (message.type != ' warning' || !isAppInitiatedAction??)>
                     <div
                         class="alert-${message.type} ${properties.kcAlertClass!} pf-m-<#if message.type = 'error'>danger<#else>${message.type}</#if>">
                         <div class="pf-c-alert__icon">
@@ -79,7 +79,7 @@
                         </div>
                         <span class="${properties.kcAlertTitleClass!}">${kcSanitize(message.summary)?no_esc}</span>
                     </div>
-                </#if>                         
+                </#if>                           -->
 
                 <#--  Rendering Form  -->
                 <#nested "form">
