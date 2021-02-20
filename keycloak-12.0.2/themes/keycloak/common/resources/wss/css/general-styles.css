@@ -305,6 +305,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px #f6f6f6 inset !important;
+    box-shadow: 0 0 0 30px #f6f6f6 inset !important;
 }
 input.form-control::placeholder{
     color: #B8B5B5;
