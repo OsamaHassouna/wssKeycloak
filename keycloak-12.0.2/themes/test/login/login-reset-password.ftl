@@ -55,7 +55,7 @@
 
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="form-group mb-20">
-                        <button class="btn btn-primary full-width" type="submit" value="${msg('doSubmit')}">${msg('doSubmit')}</button>
+                        <button class="btn btn-primary full-width" type="submit" value="${msg('doSubmit')}">${msg('doResetPassword')}</button>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-12">

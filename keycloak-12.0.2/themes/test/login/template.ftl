@@ -1,7 +1,7 @@
 <#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false showAnotherWayIfPresent=true>
     <!DOCTYPE html
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml" class="${properties.kcHtmlClass!}" dir="ltr" lang="en">
+    <html xmlns="http://www.w3.org/1999/xhtml">
 
         <head>
             <meta charset="utf-8">
@@ -53,7 +53,7 @@
                 <#-- App-initiated actions should not see warning messages about the need to complete the action -->
                 <#-- during login.                                                                               -->
                
-                <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
+                <#--  <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
                     <div id="kc-locale">
                         <div id="kc-locale-wrapper" class="${properties.kcLocaleWrapperClass!}">
                             <div class="kc-dropdown" id="kc-locale-dropdown">
@@ -66,6 +66,18 @@
                             </div>
                         </div>
                     </div>
+                </#if>  -->
+
+                <#--  Language Switcher -->
+                <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
+                <div class="wofss-lang-switcher">
+                    <#if locale.current == 'English' >
+                        <a  href="javascript:currentUrl('ar')" aria-label="lang" class="float-right"><img src="${url.resourcesPath}/img/ar.svg" width="25"></a>
+                    </#if>
+                    <#if locale.current == 'Arabic' >
+                        <a  href="javascript:currentUrl('en')" aria-label="lang" class="float-left"><img src="${url.resourcesPath}/img/en.svg" width="25"></a>
+                    </#if>
+                </div>
                 </#if>
                     
                 <#--  <#if displayMessage && message?has_content && (message.type != ' warning' || !isAppInitiatedAction??)>
@@ -85,6 +97,72 @@
                 <#nested "form">
                        
             </div>
+
+
+        <script>
+            function currentUrl(lang) {
+                setCookie("language",lang,30);
+                var currentUrl= window.location.href;
+                if(currentUrl.includes('kc_locale'))
+                {
+                    if(lang == 'ar')
+                        window.location.href=currentUrl.replace('kc_locale=en', 'kc_locale=ar');
+                    else if(lang == 'en')
+                        window.location.href=currentUrl.replace('kc_locale=ar', 'kc_locale=en');
+                }
+                else
+                {
+                    if(currentUrl.includes("?"))
+                        window.location.href=currentUrl + '&kc_locale=' + lang
+                    else
+                        window.location.href=currentUrl + '?kc_locale=' + lang
+                }
+             }
+              
+            (function() {
+                var body = document.body;
+                console.log(getCookie('language'));
+                console.log(body.classList);
+                if(getCookie('language') == 'ar')
+                {
+                    body.classList.add("rtl");
+                }else {
+                    body.classList.add("ltr");
+                }  
+            })();
+
+            function setCookie(name, value, daysToLive) {
+                // Encode value in order to escape semicolons, commas, and whitespace
+                var cookie = name + "=" + encodeURIComponent(value);
+                
+                if(typeof daysToLive === "number") {
+                    /* Sets the max-age attribute so that the cookie expires
+                    after the specified number of days */
+                    cookie += "; max-age=" + (daysToLive*24*60*60);
+                    
+                    document.cookie = cookie;
+                }
+            }
+            function getCookie(name) {
+                // Split cookie string and get all individual name=value pairs in an array
+                var cookieArr = document.cookie.split(";");
+                // Loop through the array elements
+                for(var i = 0; i < cookieArr.length; i++) {
+                    var cookiePair = cookieArr[i].split("=");
+                    
+                    /* Removing whitespace at the beginning of the cookie name
+                    and compare it with the given string */
+                    if(name == cookiePair[0].trim()) {
+                        // Decode the cookie value and return
+                        return decodeURIComponent(cookiePair[1]);
+                    }
+                }
+                
+                // Return null if not found
+                return null;
+            }
+        </script>
+
         </body>
 
     </html>

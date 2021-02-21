@@ -84,3 +84,41 @@
         height: calc(100vh + 30vh);
     }
 }
+
+/* lang Switcher */
+
+.wofss-lang-switcher{
+  margin-top: 6px;
+}
+
+.wofss-lang-switcher li{
+  display: inline-block;
+  padding:0px 5px;
+}
+
+.wofss-lang-switcher a{
+  color:#e0e0e0;
+  display: inline-block;
+}
+
+.float-right{
+  float:right !important;
+}
+
+.float-left{
+  float:left !important;
+}
+
+.wofss-lang-switcher a{
+    position: absolute;
+    top:15px;
+    right:20px;
+}
+
+input.form-control.sms-code {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    height: 60px;
+    max-width: 70px;
+}
