@@ -79,8 +79,8 @@
         flex-direction: column;
     }
 }
-@media (max-height: 710px){
+@media (max-height: 720px){
     .wss-kclogin{
-        height: calc(100vh + 150px);
+        height: calc(100vh + 30vh);
     }
 }
