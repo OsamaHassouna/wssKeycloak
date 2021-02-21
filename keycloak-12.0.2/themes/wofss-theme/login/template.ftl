@@ -17,7 +17,7 @@
     </#if>
 </head>
 
-	<body>
+	<body style="background: url('${url.resourcesPath}/img/bg-2.png') no-repeat no-repeat; background-size: cover;">
         <div class="page-wrapper bg-gra-01">
             <div class="wrapper wrapper--w780">
 
