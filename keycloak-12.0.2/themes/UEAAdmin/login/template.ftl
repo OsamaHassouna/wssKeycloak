@@ -1,7 +1,7 @@
 <#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false showAnotherWayIfPresent=true>
     <!DOCTYPE html
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml" class="${properties.kcHtmlClass!}" dir="ltr" lang="en">
+    <html xmlns="http://www.w3.org/1999/xhtml" class="${properties.kcHtmlClass!}" dir="rtl" lang="ar">
 
         <head>
             <meta charset="utf-8">
@@ -54,11 +54,12 @@
                 <#-- during login.                                                                               -->
                
                 <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
+
                     <div id="kc-locale">
                         <div id="kc-locale-wrapper" class="${properties.kcLocaleWrapperClass!}">
-                            <div class="kc-dropdown" id="kc-locale-dropdown">
-                                <a href="#" id="kc-current-locale-link">${locale.current}</a>
-                                <ul>
+                            <div class="kc-dropdown dropdown" id="kc-locale-dropdown">
+                                <a href="#" class="dropbtn" onclick="myFunction()" id="kc-current-locale-link">${locale.current}</a>
+                                <ul id="myDropdown" class="dropdown-content">
                                     <#list locale.supported as l>
                                         <li class="kc-dropdown-item"><a href="${l.url}">${l.label}</a></li>
                                         </#list>
@@ -66,6 +67,31 @@
                             </div>
                         </div>
                     </div>
+
+                    
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
                 </#if>
                     
                 <#--  <#if displayMessage && message?has_content && (message.type != ' warning' || !isAppInitiatedAction??)>

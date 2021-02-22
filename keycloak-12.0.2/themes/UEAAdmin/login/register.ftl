@@ -20,7 +20,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="form-group row mb-30 d-flex justify-content-center">
                             <div class="col-sm-12 col-md-6 col-lg-6 text-center">
-                                <a href="${url.loginUrl}" class="btn-link btn-muted pb-hover font-weight-bold font-size-lg">${msg("login")}</a>
+                                <a href="${url.loginUrl}" class="btn-link btn-muted pb-hover font-weight-bold font-size-lg">${msg("doLogIn")}</a>
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6 text-center">
                                 <a href="${url.registrationUrl}" class="btn-link btn-muted pb-hover active font-weight-bold font-size-lg">${msg("doRegister")}</a>
@@ -37,7 +37,7 @@
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <div class="form-group mb-20">
                                 <label for="firstName">${msg("firstName")}</label>
-                                <input type="text" class='form-control' id="firstName" name="firstName" placeholder="First name"
+                                <input type="text" class='form-control' id="firstName" name="firstName" placeholder="${msg("firstName")}"
                                 value="${(register.formData.firstName!'')}"
                                 aria-invalid="<#if messagesPerField.existsError('firstName')>true</#if>">
 
@@ -53,7 +53,7 @@
                             <div class="form-group mb-20">
                                 <label for="lastName">${msg("lastName")}</label>
                                 <input type="text" class='form-control' id="lastName" name="lastName" 
-                                    value="${(register.formData.lastName!'')}" placeholder="Last name"
+                                    value="${(register.formData.lastName!'')}" placeholder="${msg("lastName")}"
                                     aria-invalid="<#if messagesPerField.existsError('lastName')>true</#if>">
 
                                     <#if messagesPerField.existsError('lastName')>
@@ -68,7 +68,7 @@
                             <div class="form-group mb-20">
                                 <label for="email">${msg("email")}</label>
                                 <input type="email" class='form-control' id="email" name="email" autocomplete="email"
-                                       value="${(register.formData.email!'')}" placeholder="Email"
+                                       value="${(register.formData.email!'')}" placeholder="${msg("email")}"
                                        aria-invalid="<#if messagesPerField.existsError('email')>true</#if>">
                                 <#if messagesPerField.existsError('email')>
                                     <span id="input-error-email" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">

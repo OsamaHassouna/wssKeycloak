@@ -24,7 +24,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="form-group row mb-30 d-flex justify-content-center">
                             <div class="col-sm-12 col-md-6 col-lg-6 text-center">
-                                <a href="${url.loginUrl}" class="btn-link btn-muted pb-hover active font-weight-bold font-size-lg">${msg("login")}</a>
+                                <a href="${url.loginUrl}" class="btn-link btn-muted pb-hover active font-weight-bold font-size-lg">${msg('doLogIn')}</a>
                             </div>
                             <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
                                 <div class="col-sm-12 col-md-6 col-lg-6 text-center">
@@ -88,7 +88,7 @@
 
                             <div class="col-sm-12 col-md-12 col-lg-12">
                                 <div class="action-group d-flex mb-20">
-                                        <button class="btn btn-primary full-width" name="login" id="kc-login" type="submit" value="${msg('doLogIn')}" style="flex: 2;">${msg('login')}</button>
+                                        <button class="btn btn-primary full-width" name="login" id="kc-login" type="submit" value="${msg('doLogIn')}" style="flex: 2;">${msg('doLogIn')}</button>
                                     <#if realm.rememberMe && !usernameEditDisabled??>
                                         <label class="checkbox m-10">
                                             <#if login.rememberMe??>

@@ -237,7 +237,7 @@ fieldset[disabled] .btn-primary:hover {
     width: 20px;
     border: 1px solid #bcbcbc;
     background-color: transparent;
-    margin-right: 10px;
+    margin-left: 10px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }

@@ -1,6 +1,6 @@
 #FileLock
-#Sat Feb 20 15:19:55 EET 2021
-hostName=OsamaHassouna
-id=177bf98bfab86a3a17e98e6f27e1a6037f7edbeaf68
+#Tue Feb 23 00:22:02 EET 2021
+hostName=192.168.1.7
+id=177cbd5cc687df336ffd0925160f09cec8035b356c3
 method=file
-server=192.168.1.123\:55732
+server=192.168.1.7\:64004

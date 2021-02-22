@@ -18,7 +18,7 @@
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="form-group text-center mb-30">
                         <h4 class="text-primary font-size-h5 font-weight-normal">${msg("forgotPassword")}</h4>
-                        <p class="text-muted font-size-sm">Enter your username or email address and we will send you instructions on how to create a new password.</p>
+                        <p class="text-muted font-size-sm">${msg("emailInstruction")}</p>
                     </div>
                 </div>
                 
@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="form-group text-center m-0">
-                        <span>Back to <a href="${url.loginUrl}" class="text-primary text-decoration-underline">${kcSanitize(msg("login"))?no_esc}</a></span>
+                        <span><a href="${url.loginUrl}" class="text-primary text-decoration-underline">${kcSanitize(msg("backToLogin"))?no_esc}</a></span>
                     </div>
                 </div>
 
